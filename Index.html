@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DrDave0x Crypto Node</title>
+  <meta name="description" content="DrDave0x Crypto Node — a minimal, high-signal hub for crypto, systems, and Genesis Collective." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="DrDave0x Crypto Node" />
+  <meta property="og:description" content="A minimal, high-signal hub for crypto, systems, and Genesis Collective." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drdave0x-crypto.github.io/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DrDave0x Crypto Node" />
+  <meta name="twitter:description" content="A minimal, high-signal hub for crypto, systems, and Genesis Collective." />
+
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.12);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --soft: rgba(255,255,255,0.10);
+      --glow: rgba(120,170,255,0.18);
+      --ok: #78ffa8;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, var(--glow), transparent 60%),
+        radial-gradient(900px 600px at 80% 40%, rgba(255,160,120,0.10), transparent 60%),
+        linear-gradient(180deg, #070a10, var(--bg));
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{
+      width:min(980px, 100%);
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:18px;
+    }
+    @media (max-width: 820px){
+      .wrap{ grid-template-columns: 1fr; }
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      backdrop-filter: blur(10px);
+    }
+    .hero h1{
+      margin: 0 0 8px 0;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: -0.02em;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(0,0,0,0.15);
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: var(--ok);
+      box-shadow: 0 0 18px rgba(120,255,168,0.55);
+    }
+    .hero p{
+      margin: 0 0 14px 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15.5px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top: 14px;
+    }
+    @media (max-width: 560px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .tile{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(0,0,0,0.16);
+    }
+    .tile h3{
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+    .tile p{
+      margin: 0 0 10px 0;
+      color: var(--muted);
+      font-size: 13.8px;
+      line-height: 1.45;
+    }
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 10px;
+    }
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      text-decoration:none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .08s ease, background .2s ease;
+      user-select:none;
+    }
+    a.btn:hover{ background: rgba(255,255,255,0.10); transform: translateY(-1px); }
+    a.btn:active{ transform: translateY(0px); }
+    .side h2{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .side p, .side li{
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    ul{ margin: 10px 0 0 18px; padding:0; }
+    .small{
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--soft);
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.55);
+    }
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.25);
+      color: rgba(255,255,255,0.85);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card hero">
+      <div class="badge"><span class="dot"></span> Live Node • GitHub Pages</div>
+      <h1>DrDave0x Crypto Node</h1>
+      <p>
+        A minimal, high-signal hub for crypto, systems thinking, and Genesis Collective work.
+        This page is intentionally simple: fast to load, easy to update, easy to share.
+      </p>
+
+      <div class="grid">
+        <div class="tile">
+          <h3>Primary Focus</h3>
+          <p>Crypto + real-world utility, resilient systems, and practical execution.</p>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/drdave0x-crypto" target="_blank" rel="noreferrer">GitHub Profile</a>
+            <a class="btn" href="https://github.com/drdave0x-crypto/drdave0x-crypto.github.io" target="_blank" rel="noreferrer">This Repo</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <h3>Contact</h3>
+          <p>Best for quick outreach and collaboration.</p>
+          <div class="btnrow">
+            <a class="btn" href="mailto:drdave0x@gmail.com">Email</a>
+            <a class="btn" href="tel:+19417698866">Call</a>
+            <a class="btn" href="https://cash.app/$usaDGW" target="_blank" rel="noreferrer">Cash App</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <h3>What’s Coming</h3>
+          <p>Roadmap will live here (short + honest): tools, updates, and public builds.</p>
+          <div class="btnrow">
+            <a class="btn" href="#updates">Updates</a>
+            <a class="btn" href="#links">Links</a>
+          </div>
+        </div>
+
+        <div class="tile">
+          <h3>Quick Edit Instructions</h3>
+          <p>
+            To change text: edit <span class="kbd">index.html</span> in the repo and commit.
+            GitHub Pages updates automatically.
+          </p>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/drdave0x-crypto/drdave0x-crypto.github.io/edit/main/index.html" target="_blank" rel="noreferrer">Edit This Page</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="updates" class="small">
+        <strong>Updates:</strong> Add short notes here when you publish something new (keeps people coming back).
+      </div>
+    </section>
+
+    <aside class="card side">
+      <h2 id="links">Links</h2>
+      <p>Use this as your stable “business card” for everything else.</p>
+      <ul>
+        <li><strong>Website:</strong> https://drdave0x-crypto.github.io/</li>
+        <li><strong>Email:</strong> drdave0x@gmail.com</li>
+        <li><strong>Phone:</strong> 941-769-8866</li>
+        <li><strong>Cash App:</strong> $usaDGW</li>
+      </ul>
+
+      <div class="small">
+        <div><strong>Next upgrade:</strong> add a social preview image (og:image) + a favicon.</div>
+        <div style="margin-top:6px;">When you’re ready, I can generate a clean logo + hero banner to match Genesis branding.</div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
