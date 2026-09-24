@@ -1,29 +1,21 @@
-# drdave0x-crypto.github.io
-drdave0x-crypto.github.io
-# DrDave0x Crypto Node (GitHub Pages)
+# David Gregory Wilson — Professional Portfolio
 
-Live site: https://drdave0x-crypto.github.io/
+A lightweight, mobile-first portfolio for David Gregory Wilson.
 
-This repository hosts a simple, fast landing page for DrDave0x:
-- Crypto + practical systems
-- Genesis Collective-related public-facing hub
-- Contact + links in one place
+## Positioning
+**Human Performance • AI Research • Systems Design**
 
-## Quick Update Instructions (No Coding Required)
-1. Open `index.html`
-2. Click the pencil icon (Edit)
-3. Change text
-4. Commit changes
+The site presents:
+- Human performance coaching and healthy-aging education
+- AI-assisted research and synthesis
+- Knowledge / workflow system design
+- Genesis Collective and related exploratory research
+- Collaboration, employment, consulting, and aligned investment opportunities
 
-GitHub Pages will auto-update.
+## Site files
+- `index.html` — complete responsive website
+- `favicon.svg` — DGW monogram
+- `robots.txt` — crawler settings
+- `.github/workflows/pages.yml` — GitHub Pages deployment workflow
 
-## Contact
-- Email: drdave0x@gmail.com
-- Phone: 941-769-8866
-- Cash App: $usaDGW
-
-## Roadmap (Short + Real)
-- Add social preview image (Open Graph)
-- Add favicon
-- Add “Updates / Changelog” section with dates
-- Optional: Convert to a PWA + offline-friendly node
+No private phone number, home address, or personal contact details are published in the portfolio.
