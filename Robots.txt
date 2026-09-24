@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://drdave0x-crypto.github.io/sitemap.xml
